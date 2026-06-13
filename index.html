@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Tetris Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="game-wrapper" id="gameWrapper">
+    <div class="game-panel" id="gamePanel">
+      <div class="game-header">
+        <span class="game-title">⚡ NEON TETRIS</span>
+        <span class="level-badge" id="levelBadge">LEVEL 1</span>
+      </div>
+      <canvas id="tetrisCanvas"></canvas>
+      <div class="mobile-controls" id="mobileControls">
+        <div class="ctrl-row">
+          <button class="ctrl-btn" id="btnLeft" aria-label="Move Left">◀</button>
+          <button class="ctrl-btn" id="btnRotate" aria-label="Rotate">↻</button>
+          <button class="ctrl-btn" id="btnRight" aria-label="Move Right">▶</button>
+        </div>
+        <div class="ctrl-row">
+          <button class="ctrl-btn" id="btnDown" aria-label="Soft Drop">▼</button>
+          <button class="ctrl-btn drop-btn" id="btnHardDrop" aria-label="Hard Drop">⏬ DROP</button>
+        </div>
+      </div>
+      <div class="game-over-overlay" id="gameOverOverlay">
+        <span class="game-over-text">GAME OVER</span>
+        <span class="game-over-score" id="gameOverScore">0</span>
+        <button class="btn primary" id="btnRestartOverlay">🔄 Play Again</button>
+      </div>
+    </div>
+
+    <div class="side-panel" id="sidePanel">
+      <div class="stat-block">
+        <div class="stat-label">Score</div>
+        <div class="stat-value" id="scoreDisplay">0</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">Level</div>
+        <div class="stat-value" id="levelDisplay">1</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">Lines</div>
+        <div class="stat-value" id="linesDisplay">0</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">Next</div>
+        <div class="next-piece-preview">
+          <canvas id="previewCanvas"></canvas>
+        </div>
+      </div>
+      <button class="btn primary" id="btnRestart">🔄 New Game</button>
+      <button class="btn" id="btnPause" style="display:none;">⏯ Pause</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
